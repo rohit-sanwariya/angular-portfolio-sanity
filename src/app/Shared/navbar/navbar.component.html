@@ -1,0 +1,14 @@
+<nav class="w-screen h-20 text-black">
+<ul class="w-full flex justify-around h-full items-center">
+  <div class="flex align-middle flex-col items-end p-2 ">
+    <h2 class="text-4xl cursor-pointer font-amaticsc origin-center -rotate-12 m-0" [routerLink]="['','home']" >Rohit</h2>
+  <span class="line -rotate-12"></span>
+  </div>
+  <mat-icon class=" sm:hidden">menu</mat-icon>
+  <li *ngFor="let link of linkList">
+    <a class="text-xl" [routerLink]="['',link.path]" [routerLinkActive]="['underline','underline-offset-8','tracking-wide','text-2xl']">
+      {{link.title}} 
+    </a>
+  </li>
+</ul>
+</nav>
